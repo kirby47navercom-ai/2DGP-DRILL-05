@@ -32,6 +32,8 @@ def handle_events1():
             elif event.key == SDLK_LEFT:
                 dir += 1
 
+def handle_events2():
+    pass
 
 
 x = 800 // 2
@@ -47,6 +49,7 @@ while True:
     grass.draw(400, 100)
 
     handle_events1()
+    handle_events2()
     dir_check(dir)
 
     frame= (frame + 1) % 8
