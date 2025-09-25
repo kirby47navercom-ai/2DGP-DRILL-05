@@ -10,10 +10,14 @@ def dir_check():
 
     if dirx == 1 or dirx == -1:
         x += dirx * 10
+        if 30 > x or x > 750:
+            x -= dirx * 10
         character.clip_draw(frame * 100, 100, 100, 100, x, y)
     if diry == 1 or diry == -1:
         y += diry * 10
-        character.clip_draw(frame * 100, 0, 100, 100, x, y)
+        if 30 > y or y> 550:
+            y -= diry * 10
+        character.clip_draw(frame * 100, 100, 100, 100, x, y)
     if dirx ==0 and diry == 0:
         character.clip_draw(frame * 100, 300, 100, 100, x, y)
 
