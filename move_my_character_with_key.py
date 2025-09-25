@@ -5,19 +5,26 @@ grass = load_image('TUK_GROUND.png')
 character = load_image('animation_sheet.png')
 
 
+def dir_check(check):
+    if check == 0:
+        character.clip_draw(frame * 100, 300, 100, 100, x, 90)
+    elif check != 0:
+        character.clip_draw(frame * 100, 100, 100, 100, x, 90)
+
+
+
 x = 800 // 2
 frame = 0
 dir = 0
+
+
+
+
 while True:
     clear_canvas()
     grass.draw(400, 100)
 
-
-
-    if dir == 0:
-        character.clip_draw(frame * 100, 300, 100, 100, x, 90)
-    elif dir != 0:
-        character.clip_draw(frame * 100, 100, 100, 100, x, 90)
+    Dir_check(dir)
 
     frame= (frame + 1) % 8
     update_canvas()
