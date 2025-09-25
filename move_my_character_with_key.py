@@ -11,8 +11,17 @@ dir = 0
 while True:
     clear_canvas()
     grass.draw(400, 100)
+
+
+
+    if dir == 0:
+        character.clip_draw(frame * 100, 300, 100, 100, x, 90)
+    elif dir != 0:
+        character.clip_draw(frame * 100, 100, 100, 100, x, 90)
+
+    frame= (frame + 1) % 8
     update_canvas()
-    delay(0.01)
+    delay(0.1)
 
 
 close_canvas()
