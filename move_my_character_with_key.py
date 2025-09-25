@@ -11,6 +11,9 @@ def dir_check(check):
     elif check != 0:
         character.clip_draw(frame * 100, 100, 100, 100, x, 90)
 
+def handle_events():
+    pass
+
 
 
 x = 800 // 2
@@ -24,7 +27,8 @@ while True:
     clear_canvas()
     grass.draw(400, 100)
 
-    Dir_check(dir)
+    handle_events()
+    dir_check(dir)
 
     frame= (frame + 1) % 8
     update_canvas()
